@@ -36,8 +36,8 @@ const DualPivotQuickSort: React.FC<DualPivotQuickSortProps> = ({ data }) => {
     if (arr[low] > arr[high]) {
       [arr[low], arr[high]] = [arr[high], arr[low]];
     }
-    let pivot1 = arr[low];
-    let pivot2 = arr[high];
+    const pivot1 = arr[low];
+    const pivot2 = arr[high];
 
     let i = low + 1;
     let lt = low + 1;

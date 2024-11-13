@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
 import BubbleSort from "./sorting/BubbleSort";
 import QuickSort from "./sorting/QuickSort";
@@ -10,11 +9,11 @@ import SelectionSort from "./sorting/SelectionSort";
 import HeapSort from "./sorting/HeapSort";
 import DualPivotQuickSort from "./sorting/DualPivotQuickSort"
 
+
 export default function Home() {
   const [elementCount, setElementCount] = useState(20);
   const [data, setData] = useState<number[]>([]);
 
-  // Generate random data based on the element count
   const generateData = () => {
     const randomData = Array.from({ length: elementCount }, () =>
       Math.floor(Math.random() * 100)
